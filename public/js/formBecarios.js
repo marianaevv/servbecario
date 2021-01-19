@@ -37,7 +37,7 @@ function enviarPreferencia (nombre, correo, nomina,alumno1, matricula1,alumno2, 
     fetch(urlCreate, settings)
     .then(response=>{
         if(response.ok){
-         
+         alert("REGISTRO EXITOSO")
             return response.json();
         }
         return response.statusText;
@@ -77,10 +77,26 @@ btnEnviar.addEventListener('click', (event)=>{
         inputAlumno5.value, inputMatricula5.value,inputAlumno6.value, inputMatricula6.value,
         inputAlumno7.value, inputMatricula7.value,inputAlumno8.value, inputMatricula8.value
         );
-        nombre ="";
-        nomina ="";
-        correo="";
-    
+   
+        nombre.value ="";
+        nomina.value ="";
+        correo.value="";
+        alumno1.value="";
+        matricula1.value="";
+        alumno2.value="";
+        matricula2.value="";
+        alumno3.value="";
+        matricula3.value="";
+        alumno4.value="";
+        matricula4.value="";
+        alumno5.value="";
+        matricula5.value="";
+        alumno6.value="";
+        matricula6.value="";
+        alumno7.value="";
+        matricula7.value="";
+        alumno8.value="";
+        matricula8.value="";
 });
 
 }

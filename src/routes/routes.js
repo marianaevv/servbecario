@@ -91,9 +91,7 @@ router.post('/api/newMaestro', ( req, res ) => {
 /*router.post("/api/newMaestro", async (req, res) => {
   await maestro.nuevoMaestro(req, res);
 });*/
-if (process.env.NODE_ENV === 'production') {
-	app.use(express.static('/build'));
-}
+
 //La ruta no existe
 router.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, '../build', 'index.html'));

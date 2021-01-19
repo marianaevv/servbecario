@@ -2,7 +2,7 @@
 let API_TOKEN = 'TokenAdmi'
 function enviarPreferencia (nombre, correo, nomina,alumno1, matricula1,alumno2, matricula2,
     alumno3, matricula3,alumno4, matricula4,alumno5, matricula5,alumno6, matricula6,
-    alumno7, matricula7,alumno8, matricula8){
+    alumno7, matricula7,alumno8, matricula8, comentarios){
     let urlCreate = '/api/newMaestro';
     let solicitud = {
         nombre:nombre,
@@ -24,6 +24,7 @@ function enviarPreferencia (nombre, correo, nomina,alumno1, matricula1,alumno2, 
         matricula7:matricula7,
         alumno8:alumno8,
         matricula8:matricula8,
+        comentarios:comentarios
     }
     let settings = {
         method:'POST',
@@ -70,12 +71,14 @@ btnEnviar.addEventListener('click', (event)=>{
     let inputMatricula7 = document.querySelector('#matricula7');
     let inputAlumno8 = document.querySelector('#alumno8');
     let inputMatricula8 = document.querySelector('#matricula8');
+    let comentarios = document.querySelector('.comentarios');
+    console.log(comentarios.value);
     event.preventDefault();
     enviarPreferencia(inputNombre.value, inputNomina.value,inputCorreo.value,
         inputAlumno1.value, inputMatricula1.value,inputAlumno2.value, inputMatricula2.value,
         inputAlumno3.value, inputMatricula3.value,inputAlumno4.value, inputMatricula4.value,
         inputAlumno5.value, inputMatricula5.value,inputAlumno6.value, inputMatricula6.value,
-        inputAlumno7.value, inputMatricula7.value,inputAlumno8.value, inputMatricula8.value
+        inputAlumno7.value, inputMatricula7.value,inputAlumno8.value, inputMatricula8.value, comentarios.value
         );
    
         nombre.value ="";
@@ -97,6 +100,7 @@ btnEnviar.addEventListener('click', (event)=>{
         matricula7.value="";
         alumno8.value="";
         matricula8.value="";
+        comentarios.value="";
 });
 
 }

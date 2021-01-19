@@ -37,6 +37,7 @@ function enviarPreferencia (nombre, correo, nomina,alumno1, matricula1,alumno2, 
     fetch(urlCreate, settings)
     .then(response=>{
         if(response.ok){
+         
             return response.json();
         }
         return response.statusText;
@@ -47,7 +48,7 @@ function enviarPreferencia (nombre, correo, nomina,alumno1, matricula1,alumno2, 
 }
 
 function watchUsersRegisterForm(){
-let btnEnviar = document.querySelector('#btnEnviar');
+let btnEnviar = document.querySelector('.btnEnviar');
 btnEnviar.addEventListener('click', (event)=>{
     console.log("click");
     let inputNombre = document.querySelector('#nombre');
@@ -76,7 +77,10 @@ btnEnviar.addEventListener('click', (event)=>{
         inputAlumno5.value, inputMatricula5.value,inputAlumno6.value, inputMatricula6.value,
         inputAlumno7.value, inputMatricula7.value,inputAlumno8.value, inputMatricula8.value
         );
-    alert("REGISTRO EXITOSO");
+        nombre ="";
+        nomina ="";
+        correo="";
+    
 });
 
 }

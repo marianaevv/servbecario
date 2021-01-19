@@ -61,17 +61,18 @@ router.post('/api/newMaestro', ( req, res ) => {
     maestro.alumnos.alumno8 = req.body.alumno8;
     maestro.alumnos.matricula8 = req.body.matricula8;
     maestro.comentarios = req.body.comentarios;
+    if(!req.body.nombre || !req.body.nomina || !req.body.correo ){
+        res.statusMessage = "Please send all the fields required";
+        return res.status( 406 ).end()
+    }
     try {
          maestro.save();
         return res.status(201).send(maestro);
       } catch (err) {
         return res.status(500).send(err);
       }
-  /*  if(!nombre || !nomina || !correo ){
-        res.statusMessage = "Please send all the fields required";
-        return res.status( 406 ).end()
-    }
-
+    
+/*
     const newMaestro = { nombre, nomina, correo, alumno1, matricula1
         , alumno2, matricula2, alumno3, matricula3, alumno4, matricula4
         , alumno5, matricula5, alumno6, matricula6, alumno7, matricula7

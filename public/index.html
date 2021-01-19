@@ -9,34 +9,36 @@
 </head>
 <body><div class="container">
     <div>
-        <div className="titleServ">
+        <div class="titleServ">
             <h3>SERVICIO BECARIO</h3>
         </div>
-        <h5 className="titleColab">Información del colaborador</h5>
-        <form class="formData">
-           <div class="form-group">
-              <label for="exampleInputPassword1">Nombre</label>
-              <input  name="nombre" class="input inputgg form-control" type="text"   id="nombre" required>
+        <h5 class="titleColab">Información del colaborador</h5>
+
+          <form >
+            <div class="form-group row">
+                <label class="col-sm-1" for="exampleInputPassword1">Nombre</label>
+                <input  name="nombre" class="input inputgg form-control col-sm-5" type="text"   id="nombre" required>
+           
             </div> 
-            <div class="form-group">
-                <label for="exampleInputPassword1">Nomina</label>
-                <input  name="nomina" class="input inputgg form-control" type="text"   id="nomina"required >
-              </div> 
-            <div class="form-group">
-              <label for="exampleInputEmail1">Correo electrónico</label>
-              <input type="email" class="form-control input inputgg"  name="correo" id="correo"required>
-          </div>
-          <h5 className="titleAlumnos"> Ingresar nombre y matricula de los alumnos que prefiera para servicio becario </h5>
-        <form>
-            <div class="row">
-              <div class="col">
-                <input type="text" class="form-control" id="alumno1" placeholder="Alumno 1">
-              </div>
-              <div class="col">
-                <input type="text" class="form-control" id="matricula1" placeholder="Matricula 1">
-              </div>
+              <div class="form-group row">
+                  <label class="col-sm-1" for="exampleInputPassword1">Nomina</label>
+                  <input  name="nomina" class="input inputgg form-control col-sm-5" type="text"   id="nomina"required >
+                </div> 
+              <div class="form-group row">
+                <label class="col-sm-1" for="exampleInputEmail1">Correo</label>
+                <input type="email" class="form-control input inputgg col-sm-5"  name="correo" id="correo"required>
             </div>
-            <div class="row">
+            <h5 class="titleAlumnos"> Ingresar nombre y matricula de los alumnos que prefiera para servicio becario </h5>
+       
+            <div class="row al">
+                <div class="col">
+                  <input type="text" class="form-control" id="alumno1" placeholder="Alumno 1">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" id="matricula1" placeholder="Matricula 1">
+                </div>
+              </div>
+              <div class="row al">
                 <div class="col">
                   <input type="text" class="form-control" id="alumno2" placeholder="Alumno 2">
                 </div>
@@ -44,7 +46,7 @@
                   <input type="text" class="form-control" id="matricula2" placeholder="Matricula 2">
                 </div>
               </div>
-              <div class="row">
+              <div class="row al">
                 <div class="col">
                   <input type="text" class="form-control" id="alumno3" placeholder="Alumno 3">
                 </div>
@@ -52,7 +54,7 @@
                   <input type="text" class="form-control" id="matricula3" placeholder="Matricula 3">
                 </div>
               </div>
-              <div class="row">
+              <div class="row al">
                 <div class="col">
                   <input type="text" class="form-control" id="alumno4" placeholder="Alumno 4">
                 </div>
@@ -60,7 +62,7 @@
                   <input type="text" class="form-control" id="matricula4" placeholder="Matricula 4">
                 </div>
               </div>
-              <div class="row">
+              <div class="row al">
                 <div class="col">
                   <input type="text" class="form-control" id="alumno5" placeholder="Alumno 5">
                 </div>
@@ -68,7 +70,7 @@
                   <input type="text" class="form-control" id="matricula5" placeholder="Matricula 5">
                 </div>
               </div>
-              <div class="row">
+              <div class="row al">
                 <div class="col">
                   <input type="text" class="form-control" id="alumno6" placeholder="Alumno 6">
                 </div>
@@ -76,7 +78,7 @@
                   <input type="text" class="form-control" id="matricula6" placeholder="Matricula 6">
                 </div>
               </div>
-              <div class="row">
+              <div class="row al">
                 <div class="col">
                   <input type="text" class="form-control" id="alumno7" placeholder="Alumno 7">
                 </div>
@@ -84,7 +86,7 @@
                   <input type="text" class="form-control" id="matricula7" placeholder="Matricula 7">
                 </div>
               </div>
-              <div class="row">
+              <div class="row al">
                 <div class="col">
                   <input type="text" class="form-control" id="alumno8" placeholder="Alumno 8">
                 </div>
@@ -92,13 +94,38 @@
                   <input type="text" class="form-control" id="matricula8" placeholder="Matricula 8">
                 </div>
               </div>
+
+              <h5 class="titleAlumnos">Comentarios Adicionales</h5>
+              <div class="form-group">
+                  <textarea class="form-control" id="exampleFormControlTextarea1" id="comentarios" rows="3"></textarea>
+                </div>
+
+
+                <div class="btnDivEnviar">
+
+            <button class="btn btn-primary btnEnviar" type="submit">Enviar</button></div>
           </form>
-          <h5 className="titleAlumnos">Comentarios Adicionales</h5>
-        <div class="form-group">
-            <textarea class="form-control" id="exampleFormControlTextarea1" id="comentarios" rows="3"></textarea>
-          </div>
-            <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar</button>
-          </form>
+          
+          <script>
+          // Example starter JavaScript for disabling form submissions if there are invalid fields
+          (function() {
+            'use strict';
+            window.addEventListener('load', function() {
+              // Fetch all the forms we want to apply custom Bootstrap validation styles to
+              var forms = document.getElementsByClassName('needs-validation');
+              // Loop over them and prevent submission
+              var validation = Array.prototype.filter.call(forms, function(form) {
+                form.addEventListener('submit', function(event) {
+                  if (form.checkValidity() === false) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                  }
+                  form.classList.add('was-validated');
+                }, false);
+              });
+            }, false);
+          })();
+          </script>
     </div>
 </div></div>
         <script src="./js/formBecarios.js"></script>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="./css/FormBecarios.css" rel="stylesheet" type="text/css" />
+    <title>Página Principal</title>
+</head>
+<body><div class="container">
+    <div>
+        <div className="titleServ">
+            <h3>SERVICIO BECARIO</h3>
+        </div>
+        <h5 className="titleColab">Información del colaborador</h5>
+        <form class="formData">
+           <div class="form-group">
+              <label for="exampleInputPassword1">Nombre</label>
+              <input  name="nombre" class="input inputgg form-control" type="text"   id="nombre" required>
+            </div> 
+            <div class="form-group">
+                <label for="exampleInputPassword1">Nomina</label>
+                <input  name="nomina" class="input inputgg form-control" type="text"   id="nomina"required >
+              </div> 
+            <div class="form-group">
+              <label for="exampleInputEmail1">Correo electrónico</label>
+              <input type="email" class="form-control input inputgg"  name="correo" id="correo"required>
+          </div>
+          <h5 className="titleAlumnos"> Ingresar nombre y matricula de los alumnos que prefiera para servicio becario </h5>
+        <form>
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" id="alumno1" placeholder="Alumno 1">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" id="matricula1" placeholder="Matricula 1">
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" id="alumno2" placeholder="Alumno 2">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" id="matricula2" placeholder="Matricula 2">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" id="alumno3" placeholder="Alumno 3">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" id="matricula3" placeholder="Matricula 3">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" id="alumno4" placeholder="Alumno 4">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" id="matricula4" placeholder="Matricula 4">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" id="alumno5" placeholder="Alumno 5">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" id="matricula5" placeholder="Matricula 5">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" id="alumno6" placeholder="Alumno 6">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" id="matricula6" placeholder="Matricula 6">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" id="alumno7" placeholder="Alumno 7">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" id="matricula7" placeholder="Matricula 7">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" id="alumno8" placeholder="Alumno 8">
+                </div>
+                <div class="col">
+                  <input type="text" class="form-control" id="matricula8" placeholder="Matricula 8">
+                </div>
+              </div>
+          </form>
+          <h5 className="titleAlumnos">Comentarios Adicionales</h5>
+        <div class="form-group">
+            <textarea class="form-control" id="exampleFormControlTextarea1" id="comentarios" rows="3"></textarea>
+          </div>
+            <button type="submit" id="btnEnviar" class="btn btn-primary">Enviar</button>
+          </form>
+    </div>
+</div></div>
+        <script src="./js/formBecarios.js"></script>
+</body>
+</html>

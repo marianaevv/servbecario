@@ -7,35 +7,37 @@
     <link href="./css/FormBecarios.css" rel="stylesheet" type="text/css" />
     <title>Página Principal</title>
 </head>
-<body><div class="container">
-    <div>
-        <div class="titleServ">
+<body>  <div class="titleServ">
             <h3>SERVICIO BECARIO</h3>
+            <h5>CHIHUAHUA</h5>
         </div>
+        <div class="container">
+    <div>
+      
         <h5 class="titleColab">Información del colaborador</h5>
 
           <form >
             <div class="form-group row">
-                <label class="col-sm-1" for="exampleInputPassword1">Nombre</label>
-                <input  name="nombre" class="input inputgg form-control col-sm-5" type="text"   id="nombre" required>
+                <p class="dot">*</p><label class="col-sm-3" for="exampleInputPassword1">Nombre Completo</label>
+                <input  name="nombre" class="input inputgg form-control col-sm-8" type="text"   id="nombre" required>
            
             </div> 
               <div class="form-group row">
-                  <label class="col-sm-1" for="exampleInputPassword1">Nomina</label>
-                  <input  name="nomina" class="input inputgg form-control col-sm-5" type="text"   id="nomina"required >
+                <p class="dot">*</p><label class="col-sm-3" for="exampleInputPassword1">Nómina (Ingresar con L0)</label>
+                  <input  name="nomina" class="input inputgg form-control col-sm-8" type="text"   id="nomina"required >
                 </div> 
               <div class="form-group row">
-                <label class="col-sm-1" for="exampleInputEmail1">Correo</label>
-                <input type="email" class="form-control input inputgg col-sm-5"  name="correo" id="correo"required>
+                <p class="dot">*</p><label class="col-sm-3" for="exampleInputEmail1">Correo electrónico</label>
+                <input type="email" class="form-control input inputgg col-sm-8"  name="correo" id="correo"required>
             </div>
-            <h5 class="titleAlumnos"> Ingresar nombre y matricula de los alumnos que prefiera para servicio becario </h5>
+            <h5 class="titleAlumnos"> Ingresar nombre y matrícula de los alumnos que prefiera para servicio becario </h5>
        
             <div class="row al">
                 <div class="col">
                   <input type="text" class="form-control" id="alumno1" placeholder="Alumno 1">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="matricula1" placeholder="Matricula 1">
+                  <input type="text" class="form-control" id="matricula1" placeholder="Matrícula 1 ingresar con A0">
                 </div>
               </div>
               <div class="row al">
@@ -43,7 +45,7 @@
                   <input type="text" class="form-control" id="alumno2" placeholder="Alumno 2">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="matricula2" placeholder="Matricula 2">
+                  <input type="text" class="form-control" id="matricula2" placeholder="Matrícula 2 ingresar con A0">
                 </div>
               </div>
               <div class="row al">
@@ -51,7 +53,7 @@
                   <input type="text" class="form-control" id="alumno3" placeholder="Alumno 3">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="matricula3" placeholder="Matricula 3">
+                  <input type="text" class="form-control" id="matricula3" placeholder="Matrícula 3 ingresar con A0">
                 </div>
               </div>
               <div class="row al">
@@ -59,7 +61,7 @@
                   <input type="text" class="form-control" id="alumno4" placeholder="Alumno 4">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="matricula4" placeholder="Matricula 4">
+                  <input type="text" class="form-control" id="matricula4" placeholder="Matrícula 4 ingresar con A0">
                 </div>
               </div>
               <div class="row al">
@@ -67,7 +69,7 @@
                   <input type="text" class="form-control" id="alumno5" placeholder="Alumno 5">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="matricula5" placeholder="Matricula 5">
+                  <input type="text" class="form-control" id="matricula5" placeholder="Matrícula 5 ingresar con A0">
                 </div>
               </div>
               <div class="row al">
@@ -75,7 +77,7 @@
                   <input type="text" class="form-control" id="alumno6" placeholder="Alumno 6">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="matricula6" placeholder="Matricula 6">
+                  <input type="text" class="form-control" id="matricula6" placeholder="Matrícula 6 ingresar con A0">
                 </div>
               </div>
               <div class="row al">
@@ -83,7 +85,7 @@
                   <input type="text" class="form-control" id="alumno7" placeholder="Alumno 7">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="matricula7" placeholder="Matricula 7">
+                  <input type="text" class="form-control" id="matricula7" placeholder="Matrícula 7 ingresar con A0">
                 </div>
               </div>
               <div class="row al">
@@ -91,16 +93,19 @@
                   <input type="text" class="form-control" id="alumno8" placeholder="Alumno 8">
                 </div>
                 <div class="col">
-                  <input type="text" class="form-control" id="matricula8" placeholder="Matricula 8">
+                  <input type="text" class="form-control" id="matricula8" placeholder="Matrícula 8 ingresar con A0">
                 </div>
               </div>
-
+              <p>En caso de necesitar más becarios, les pedimos llenar nuevamente el formulario con los datos del alumno</p>
               <h5 class="titleAlumnos">Comentarios Adicionales</h5>
               <div class="form-group">
                   <textarea class="form-control" id="exampleFormControlTextarea1" id="comentarios" rows="3"></textarea>
                 </div>
 
-
+                <p>En caso de no contar con los datos de los alumnos, favor de llenar el cuadro anterior
+                  con el número de becarios de prepa y/o profesional que requiere este semestre
+                </p>
+             
                 <div class="btnDivEnviar">
 
             <button class="btn btn-primary btnEnviar" type="submit">Enviar</button></div>

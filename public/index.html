@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
     <link href="./css/FormBecarios.css" rel="stylesheet" type="text/css" />
     <title>Página Principal</title>
 </head>
@@ -108,8 +110,22 @@
              
                 <div class="btnDivEnviar">
 
-            <button class="btn btn-primary btnEnviar" type="submit">Enviar</button></div>
+            <button class="btn btn-primary btnEnviar" onclick="validation();" type="submit">Enviar</button></div>
           </form>
+          <script>
+            function validation(){
+              var nombre = document.getElementById('nombre').value;
+              var nomina = document.getElementById('nomina').value;
+              var correo = document.getElementById('correo').value;
+            if((nombre =="") ||(nomina=="")||(correo=="")){
+              sweetAlert("Favor de llenar los campos obligatorios","Nombre, nómina y correo","error");
+              
+            }else{
+              swal("Registro exitoso", "Su preferencia ha sido enviada correctamente", "success");
+            }
+            }
+
+          </script>
           
           <script>
           // Example starter JavaScript for disabling form submissions if there are invalid fields

@@ -34,12 +34,13 @@ function enviarPreferencia (nombre, correo, nomina,alumno1, matricula1,alumno2, 
         },
         body : JSON.stringify( solicitud )
     }
-    console.log(solicitud);
+   
     fetch(urlCreate, settings)
     .then(response=>{
         if(response.ok){
-         alert("REGISTRO EXITOSO")
-            return response.json();
+          
+            return  response.json();
+           
         }
         return response.statusText;
     })

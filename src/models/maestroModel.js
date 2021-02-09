@@ -82,16 +82,16 @@ const Maestros = {
         }); 
     },
 
-    /*verClientes : function() {
-        return userModel
+    verMaestros : function() {
+        return maestroModel
         .find()
-        .then( todosLosClientes => {
-            return todosLosClientes;
+        .then( todoslosmaestros => {
+            return todoslosmaestros;
         })
         .catch( err => {
             return err;
         });
-    },*/
+    },
 }
 
 module.exports = {

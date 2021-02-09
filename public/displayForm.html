@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   <script src="table2excel.js"></script>
+    <link href="./css/displayForm.css" rel="stylesheet" type="text/css" />
+    <title>Inventario</title>
+</head>
+
+<body>
+    
+    <header> 
+<h5>SERVICIO BECARIO</h5>
+    </header>
+    <button id="export">Exportar</button>
+    <br>
+    <div class="update">
+        <button type="button" class="btn btn-primary btnActualizar">Actualizar</button>
+    </div>
+      <table id="alumnos">
+        <tr>
+            <th className="thc" >Nombre</th>
+            <th className="thc" >Correo</th>
+            <th className="thc" >Nómina</th>
+            <th className="thc" >Alumnos</th>
+            <th className="thc">Matricula</th>
+            <th className="thc" >Comentarios</th>
+        </tr>
+        <tbody class="results">
+
+</tbody>
+      </table>
+      <script>
+          document.getElementById('export').addEventListener('click', function(){
+            var table2excel = new Table2Excel();
+        table2excel.export(document.querySelectorAll("#alumnos"));
+          })
+          </script>
+        <script src="./js/displayForm.js"></script>
+</body>
+</html>

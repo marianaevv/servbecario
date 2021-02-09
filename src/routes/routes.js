@@ -17,8 +17,17 @@ router.get("/api/hello", (req, res) => {
   res.status(200).send("Hello World!");
 });
 
-router.get("/api/maestros", async (req, res) => {
-  await maestro.getAllMaestros(req, res);
+router.get("/api/maestros", (req, res) => {
+  Maestros
+  .verMaestros()
+  .then(result =>{
+    return res.status(200).json(result);
+  })
+  .catch( err => {
+    res.statusMessage = "Something went wrong with the DB";
+    return res.status( 500 ).end();
+})
+
 });
 router.post('/api/newMaestro', ( req, res ) => {
     /*let nombre = req.body.nombre;

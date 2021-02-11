@@ -24,10 +24,10 @@ function getAllCustomers() {
 			for(let i = 0; i < responseJSON.length; i++){
                 results.innerHTML += `
                 <tr>
+                <td>${i}</td>
                     <td>${responseJSON[i].nombre}</td>
                     <td>${responseJSON[i].nomina}</td>
                     <td>${responseJSON[i].correo}</td>
-                    <td>
                     <table>
                     <tr>
                         <td>${responseJSON[i].alumnos.alumno1}</td>
@@ -54,9 +54,9 @@ function getAllCustomers() {
 <td>${responseJSON[i].alumnos.alumno8}</td>
 </tr>
                  </table>
-                    </td>
-                    <td>
-                    <table>
+                 </td>
+                 <td> 
+                <table>
                     <tr>
                         <td>${responseJSON[i].alumnos.matricula1}</td>
                     </tr>
@@ -83,7 +83,6 @@ function getAllCustomers() {
 </tr>
 
                  </table>
-                    </td>
                     <td>${responseJSON[i].comentarios}</td>
                 </tr>
 				`
